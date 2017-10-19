@@ -1,5 +1,7 @@
-require "celebrity_book_clubs/version"
+require_relative './celebrity_book_clubs/version'
+require_relative './celebrity_book_clubs/cli'
 
-module CelebrityBookClubs
-  # Your code goes here...
-end
+
+#module CelebrityBookClubs
+
+#end
