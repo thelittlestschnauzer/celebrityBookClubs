@@ -3,7 +3,6 @@ class CelebrityBookClubs::CLI
   def call
     puts "Welcome to Celebrity Book Clubs"
     list_clubs
-    puts "Enter the number of the club to see what book or books they are reading this month."
     list_books
   end
 
@@ -18,6 +17,7 @@ class CelebrityBookClubs::CLI
   end
 
   def list_books
+    puts puts "Enter the number of the club to see what book or books they are reading this month, type 'list' to see the list of clubs or type 'exit' when you are done!"
     input = nil
     while input != 'exit'
     input = gets.strip.downcase
@@ -36,6 +36,8 @@ class CelebrityBookClubs::CLI
         list_clubs
       when "exit"
         read_you_later
+      else
+        puts "Sorry that was an invalid response, try again."
       end
     end
   end
