@@ -19,11 +19,8 @@ class CelebrityBookClubs::CLI
   end
 
   def book_menu
-
-    # input = nil
-    # while input != 'exit'
-      puts "Enter the number of the club to see what book or books they are reading this month. Feel free to type 'list' to see the list of clubs again or type 'exit' when you are done!"
-      input = gets.strip.downcase
+    puts "Enter the number of the club to see what book or books they are reading this month. Feel free to type 'list' to see the list of clubs again or type 'exit' when you are done!"
+    input = gets.strip.downcase
 
       if input == "1"
         Books.get_books("oprah")
@@ -47,8 +44,8 @@ class CelebrityBookClubs::CLI
     puts "See you again soon!"
   end
 
-  def list_books
-    @books = CelebrityBookClubs::Books.this_month
-  end
+  # def list_books
+  #   @books = CelebrityBookClubs::Books.this_month
+  # end
 
 end
