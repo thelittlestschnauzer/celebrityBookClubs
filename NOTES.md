@@ -12,25 +12,29 @@ start making things real
 discover objects
 program
 
-1. Welcome the user
-  - Welcome to Celebrity Book Clubs.  
+CLI for Celebrity Book Clubs.
 
-2. List out the celebrity book clubs
+User will type ./bin/celebrity_book_clubs
+
+1. Welcome the user
+  - Welcome to Celebrity Book Clubs.
+  - A numbered list of the Celebrity Book Clubs will populate  
 
 	- Oprah’s Book Club
 	- RW Book Club
-	-  Our Shared Shelf - Emma Watson
+	- Our Shared Shelf - Emma Watson
 	- Belletrist - Emma Roberts
-	-  between two books - Florence Welch
+
 
 3. user picks a book club  
   - Which book club are you interested in?
-  - Enter a number 1-5 to find out what book they are reading this month!
-	- they will be numbered and the user would pick the number that corresponds to the book club
-	- which book club are you interested in?
+  - Enter the number for the book club to find out what book they are reading this month!
+
+
+  BOOKS have a title, author, details and url.
 
 4. books being read are pulled up
-	- some of the book clubs have one book per month and some of the clubs have one per week
+	
   - Enter the number of the book you want to learn more about, or enter 'list' to see the Book Clubs again, or enter 'exit'.
 	- pick the number of the book to take the user to the url?
 
@@ -40,4 +44,4 @@ program
 
 6. If user selects exit
   - exit message
-  - Come back and see what we are reading next month! 
+  - Come back and see what we are reading next month!
