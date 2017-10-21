@@ -9,39 +9,39 @@ class CelebrityBookClubs::CLI
   end
 
   def list_clubs #method that will scrape club names
-    puts "Welcome to Celebrity Book Clubs"
     puts <<-DOC
     1. Oprah’s Book Club
   	2. RW Book Club
   	3. Our Shared Shelf - Emma Watson
   	4. Belletrist - Emma Roberts
     DOC
-    #@clubs = CelebrityBookClubs::Clubs
+    book_menu#@clubs = CelebrityBookClubs::Clubs
   end
 
   def book_menu
-    input = nil
-    while input != 'exit'
-      puts "Enter the number of the club to see what book or books they are reading this month, type 'list' to see the list of clubs or type 'exit' when you are done!"
+
+    # input = nil
+    # while input != 'exit'
+      puts "Enter the number of the club to see what book or books they are reading this month. Feel free to type 'list' to see the list of clubs again or type 'exit' when you are done!"
       input = gets.strip.downcase
-      case input
-      when "1"
-        puts "Oprah's book : 'Behold the Dreamers' by Imbolo Mbue"
-      when "2"
-        puts "Reese Witherspoon's book : Slightly South of Simple by Kristy Woodson Harvey"
-      when "3"
-        puts "Emma Watson's book : Hunger: A Memoir of (My)Body by Roxanne Gay"
-      when "4"
-        puts "Emma Robert's book : Sex and Rage by Eve Babitz"
-      when "list"
+
+      if input == "1"
+        Books.get_books("oprah")
+      elsif input == "2"
+        Books.get_books("reese_witherspoon")
+      elsif input == "3"
+        Books.get_books("emma_watson")
+      elsif input == "4"
+        Books.get_books("emma_roberts")
+      elsif input == "list"
         list_clubs
-      when "exit"
+      elsif input == "exit"
         read_you_later
       else
-        puts "Sorry that was an invalid response, type 'list' and try again."
+        puts "Sorry I didn't quite understand, please try again"
+        menu
       end
     end
-  end
 
   def read_you_later
     puts "See you again soon!"
